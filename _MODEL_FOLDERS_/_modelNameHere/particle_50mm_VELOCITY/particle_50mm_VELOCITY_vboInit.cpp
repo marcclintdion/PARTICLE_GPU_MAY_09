@@ -1,0 +1,10 @@
+glGenBuffersARB(1, &particle_50mm_VELOCITY_vboID);
+glBindBufferARB(GL_ARRAY_BUFFER_ARB, particle_50mm_VELOCITY_vboID);
+glBufferDataARB(GL_ARRAY_BUFFER_ARB,       sizeof(particle_50mm_VELOCITY_VERT) + sizeof(particle_50mm_VELOCITY_NORM) + sizeof(particle_50mm_VELOCITY_TEX) + sizeof(particle_50mm_VELOCITY_VELOCITY), 0, GL_STATIC_DRAW_ARB);
+glBufferSubDataARB(GL_ARRAY_BUFFER_ARB, 0,                                                                                        sizeof(particle_50mm_VELOCITY_VERT), particle_50mm_VELOCITY_VERT);
+glBufferSubDataARB(GL_ARRAY_BUFFER_ARB,    sizeof(particle_50mm_VELOCITY_VERT),                                                           sizeof(particle_50mm_VELOCITY_NORM), particle_50mm_VELOCITY_NORM);
+glBufferSubDataARB(GL_ARRAY_BUFFER_ARB,    sizeof(particle_50mm_VELOCITY_VERT) + sizeof(particle_50mm_VELOCITY_NORM),                             sizeof(particle_50mm_VELOCITY_TEX),  particle_50mm_VELOCITY_TEX);
+glBufferSubDataARB(GL_ARRAY_BUFFER_ARB,    sizeof(particle_50mm_VELOCITY_VERT) + sizeof(particle_50mm_VELOCITY_NORM)+ sizeof(particle_50mm_VELOCITY_TEX), sizeof(particle_50mm_VELOCITY_VELOCITY), particle_50mm_VELOCITY_VELOCITY);
+    loadTexture("_MODEL_FOLDERS_/particle_50mm_VELOCITY/particle_50mm_VELOCITY_DOT3.bmp",   normalMap[530]);
+    loadTexture("_MODEL_FOLDERS_/particle_50mm_VELOCITY/particle_50mm_VELOCITY.jpg",        textureMap[530]);
+    //loadTexture("_MODEL_FOLDERS_/particle_50mm_VELOCITY/particle_50mm_VELOCITY_BUMP.jpg", specularMap[530]);
